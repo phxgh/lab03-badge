@@ -46,3 +46,15 @@ int remainingSeconds = (int)seconds % 60;
 
 Console.WriteLine("Distance: " + dist.ToString("F1") + " feet");
 Console.WriteLine("Walk time: " + minutes + " minutes " + remainingSeconds + " seconds\n");
+
+// Part 4: The Badge
+Console.WriteLine("==================================");
+Console.WriteLine("ETSU STUDENT BADGE");
+Console.WriteLine("==================================");
+Console.WriteLine("NAME " + fullName);
+Console.WriteLine("USERNAME " + username);
+int checkDigit = id % 9;
+Console.WriteLine("ID " + id + "-" + checkDigit);
+Console.WriteLine("LOCKER " + lockerNumber);
+Console.WriteLine("WALK " + minutes + " min " + remainingSeconds + "sec");
+Console.WriteLine("==================================");
