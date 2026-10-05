@@ -12,12 +12,12 @@ Console.Write("Full name: ");
 string fullName = Console.ReadLine();
 fullName = fullName.Trim();
 int spacePosition = fullName.IndexOf(" ");
-string firstName = fullName.Substring(0, spacePosition);
-string lastName = fullName.Substring(spacePosition + 1);
+string firstName = fullName.Substring(0, spacePosition).Trim();
+string lastName = fullName.Substring(spacePosition + 1).Trim();
 
 string username = firstName.Substring(0, 1).ToLower() + lastName.ToLower();
 
-Console.WriteLine("Name on badge: " + fullName.ToUpper());
+Console.WriteLine("Name on badge: " + firstName.ToUpper() + " " + lastName.ToUpper());
 Console.WriteLine("Username: " + username);
 Console.WriteLine("Initials: " + firstName[0].ToString().ToUpper() + "." + lastName[0].ToString().ToUpper() + ".");
 Console.WriteLine("Letters in last name: " + lastName.Length + "\n");
