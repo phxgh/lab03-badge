@@ -20,6 +20,9 @@ string username = firstName.Substring(0, 1).ToLower() + lastName.ToLower();
 Console.WriteLine("Name on badge: " + fullName.ToUpper());
 Console.WriteLine("Username: " + username);
 Console.WriteLine("Initials: " + firstName[0].ToString().ToUpper() + "." + lastName[0].ToString().ToUpper() + ".");
-Console.WriteLine("Letters in last name: " + lastName.Length);
+Console.WriteLine("Letters in last name: " + lastName.Length + "\n");
 
-
+// Part 2: The Numbers
+var rng = new Random();
+var id = rng.Next(100000, 999999);
+var lockerNumber = rng.Next(1, 500);
