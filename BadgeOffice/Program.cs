@@ -26,3 +26,23 @@ Console.WriteLine("Letters in last name: " + lastName.Length + "\n");
 var rng = new Random();
 var id = rng.Next(100000, 999999);
 var lockerNumber = rng.Next(1, 500);
+
+// Part 3: The Walk
+Console.Write("Dorm x: ");
+int dormX = Convert.ToInt32(Console.ReadLine());
+Console.Write("Dorm y: ");
+int dormY = Convert.ToInt32(Console.ReadLine());
+Console.Write("Class x: ");
+int classX = Convert.ToInt32(Console.ReadLine());
+Console.Write("Class y: ");
+int classY = Convert.ToInt32(Console.ReadLine());
+Console.Write("Walking speed in feet per second: \n");
+double speed = Convert.ToDouble(Console.ReadLine());
+
+double dist = Math.Sqrt(Math.Pow(classX - dormX, 2) + Math.Pow(classY - dormY, 2));
+double seconds = dist / speed;
+int minutes = (int)seconds / 60;
+int remainingSeconds = (int)seconds % 60;
+
+Console.WriteLine("Distance: " + dist.ToString("F1") + " feet");
+Console.WriteLine("Walk time: " + minutes + " minutes " + remainingSeconds + " seconds\n");
